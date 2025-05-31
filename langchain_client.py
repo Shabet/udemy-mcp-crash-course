@@ -30,7 +30,7 @@ async def main():
     tools = await client.get_tools()
     agent = create_react_agent(llm, tools)
     #result = await agent.ainvoke({"messages": [HumanMessage(content="What is 54 + 2 * 3?")]})
-    result = await agent.ainvoke({"messages": [HumanMessage(content="What is the weather in San Francisco? use the weather tool.")]})
+    result = await agent.ainvoke({"messages": [HumanMessage(content="What is the weather in New York? must use the weather tool.")]})
     print(result["messages"][-1].content)
 
 
